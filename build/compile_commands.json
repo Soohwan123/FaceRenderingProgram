@@ -1,0 +1,32 @@
+[
+{
+  "directory": "C:/Users/Soohwan Kim/Desktop/FaceRendering/FaceRenderingProgram/build/renderer",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/FaceRenderer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FaceRenderer.dir\\src\\main.cpp.obj -c \"C:\\Users\\Soohwan Kim\\Desktop\\FaceRendering\\FaceRenderingProgram\\renderer\\src\\main.cpp\"",
+  "file": "C:/Users/Soohwan Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/main.cpp",
+  "output": "renderer/CMakeFiles/FaceRenderer.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Soohwan Kim/Desktop/FaceRendering/FaceRenderingProgram/build/renderer",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/FaceRenderer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FaceRenderer.dir\\src\\shader.cpp.obj -c \"C:\\Users\\Soohwan Kim\\Desktop\\FaceRendering\\FaceRenderingProgram\\renderer\\src\\shader.cpp\"",
+  "file": "C:/Users/Soohwan Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/shader.cpp",
+  "output": "renderer/CMakeFiles/FaceRenderer.dir/src/shader.cpp.obj"
+},
+{
+  "directory": "C:/Users/Soohwan Kim/Desktop/FaceRendering/FaceRenderingProgram/build/renderer",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/FaceRenderer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FaceRenderer.dir\\src\\model.cpp.obj -c \"C:\\Users\\Soohwan Kim\\Desktop\\FaceRendering\\FaceRenderingProgram\\renderer\\src\\model.cpp\"",
+  "file": "C:/Users/Soohwan Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/model.cpp",
+  "output": "renderer/CMakeFiles/FaceRenderer.dir/src/model.cpp.obj"
+},
+{
+  "directory": "C:/Users/Soohwan Kim/Desktop/FaceRendering/FaceRenderingProgram/build/renderer",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/FaceRenderer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FaceRenderer.dir\\src\\mesh.cpp.obj -c \"C:\\Users\\Soohwan Kim\\Desktop\\FaceRendering\\FaceRenderingProgram\\renderer\\src\\mesh.cpp\"",
+  "file": "C:/Users/Soohwan Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/mesh.cpp",
+  "output": "renderer/CMakeFiles/FaceRenderer.dir/src/mesh.cpp.obj"
+},
+{
+  "directory": "C:/Users/Soohwan Kim/Desktop/FaceRendering/FaceRenderingProgram/build/renderer",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/FaceRenderer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FaceRenderer.dir\\src\\camera.cpp.obj -c \"C:\\Users\\Soohwan Kim\\Desktop\\FaceRendering\\FaceRenderingProgram\\renderer\\src\\camera.cpp\"",
+  "file": "C:/Users/Soohwan Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/camera.cpp",
+  "output": "renderer/CMakeFiles/FaceRenderer.dir/src/camera.cpp.obj"
+}
+]
