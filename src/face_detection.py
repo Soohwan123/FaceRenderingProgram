@@ -38,6 +38,7 @@ class FaceDetector:
             # 478개의 3D 좌표를 저장할 배열 생성
             points = np.zeros((478, 3))  # (x, y, z) 좌표
             nose_points = []  # 코 점들을 따로 저장
+            uv_coords = []    # UV 좌표를 저장할 리스트
             
             # 각 랜드마크의 좌표 추출
             for idx, landmark in enumerate(face_landmarks.landmark):
@@ -47,12 +48,18 @@ class FaceDetector:
                     landmark.z * 1000  # z좌표: 깊이 정보를 보기 좋게 스케일 조정
                 ]
                 
+                # UV 좌표도 이미지 크기에 맞게 스케일 조정
+                uv_coords.append([
+                    landmark.x * image.shape[1],  # u 좌표를 이미지 너비에 맞춤
+                    landmark.y * image.shape[0]   # v 좌표를 이미지 높이에 맞춤
+                ])
+                
                 # 코 부분 랜드마크인 경우 따로 저장
                 if idx in self.nose_indices:
                     nose_points.append(points[idx])
             
-            return points, nose_points
-        return None, None
+            return points, nose_points, np.array(uv_coords)
+        return None, None, None
 
     def draw_landmarks(self, image, points, nose_points):
         if points is None:

@@ -91,7 +91,11 @@ int main() {
     // 모델 로드
     Model model("models/face.obj");
 
-    
+    // 텍스쳐 바인딩
+    unsigned int textureID = model.loadTexture("models/skin_texture.jpg");
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, textureID);
+
 
     // 코의 중심점 계산
     // 모델의 vertices를 변환하여 적절한 위치와 크기로 조정
@@ -102,16 +106,16 @@ int main() {
     initialTransform = glm::rotate(initialTransform, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f));
     
     // vertices 변환
-    std::vector<glm::vec3> transformedVertices = model.vertices;
+    std::vector<Vertex> transformedVertices = model.vertices;
     for(auto& vertex : transformedVertices) {
-        glm::vec4 transformed = initialTransform * glm::vec4(vertex, 1.0f);
-        vertex = glm::vec3(transformed);
+        glm::vec4 transformed = initialTransform * glm::vec4(vertex.Position, 1.0f);
+        vertex.Position = glm::vec3(transformed);
     }
     
     // 변환된 vertices로 새로운 코의 중심점 계산
     glm::vec3 noseCenter = glm::vec3(0.0f);
     for(unsigned int idx : model.noseIndices) {
-        noseCenter += transformedVertices[idx];
+        noseCenter += transformedVertices[idx].Position;
     }
     noseCenter /= model.noseIndices.size();
     
@@ -149,7 +153,7 @@ int main() {
         shader.setMat4("projection", glm::value_ptr(g_camera->GetProjectionMatrix((float)SCR_WIDTH / (float)SCR_HEIGHT)));
 
         // 렌더링 루프 안에서, mesh.Draw() 전에
-        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
         // 메시 그리기
         mesh.Draw();

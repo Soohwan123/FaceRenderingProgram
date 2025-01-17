@@ -31,11 +31,11 @@ def main():
                 print("프레임을 읽을 수 없습니다!")
                 break
                 
-            # 얼굴 특징점 감지
-            points, nose_points = detector.detect_landmarks(frame)
+            # 얼굴 특징점 감지 (이제 UV 좌표도 함께 반환)
+            points, nose_points, uv_coords = detector.detect_landmarks(frame)
             
             if points is not None:
-                print(f"특징점 {len(points)}개 감지됨 (코 특징점: {len(nose_points)}개)")
+                print(f"특징점 {len(points)}개 감지됨 (코 특징점: {len(nose_points)}개, UV 좌표: {len(uv_coords)}개)")
                 
                 # 특징점 그리기
                 frame = detector.draw_landmarks(frame, points, nose_points)
@@ -69,9 +69,9 @@ def main():
                         except Exception as e:
                             print(f"기존 파일 삭제 중 에러 발생: {str(e)}")
 
-                    # OBJ 파일 저장 (skin_texture.jpg 사용)
+                    # OBJ 파일 저장 (이제 UV 좌표도 함께 저장)
                     print(f"OBJ 파일 저장 중... ({obj_path})")
-                    processor.save_to_obj(points, triangles, obj_path, nose_points)
+                    processor.save_to_obj(points, triangles, obj_path, nose_points, uv_coords)
                     print("OBJ 파일 저장 완료")
                     save_requested = False
             else:

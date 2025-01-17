@@ -345,6 +345,7 @@ renderer/CMakeFiles/FaceRenderer.dir/src/camera.cpp.obj: C:/Users/Soohwan\ Kim/D
 renderer/CMakeFiles/FaceRenderer.dir/src/main.cpp.obj: C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/main.cpp \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glew/include/GL/glew.h \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glew/include/GL/glew.h \
+  C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glew/include/GL/glew.h \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glfw/include/GLFW/glfw3.h \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/common.hpp \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/_fixes.hpp \
@@ -549,6 +550,7 @@ renderer/CMakeFiles/FaceRenderer.dir/src/main.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/backward/binders.h \
   C:/msys64/mingw64/include/c++/14.2.0/bit \
   C:/msys64/mingw64/include/c++/14.2.0/bits/alloc_traits.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/allocated_ptr.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/allocator.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/basic_ios.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/basic_ios.tcc \
@@ -556,6 +558,8 @@ renderer/CMakeFiles/FaceRenderer.dir/src/main.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/char_traits.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/charconv.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/chrono.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/codecvt.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/concept_check.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
@@ -565,6 +569,11 @@ renderer/CMakeFiles/FaceRenderer.dir/src/main.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception_defines.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/fs_dir.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/fs_fwd.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/fs_ops.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/fs_path.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/fstream.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/functexcept.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/functional_hash.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/hash_bytes.h \
@@ -575,8 +584,11 @@ renderer/CMakeFiles/FaceRenderer.dir/src/main.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/bits/istream.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/locale_classes.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/locale_classes.tcc \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/locale_conv.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets.tcc \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/localefwd.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/memory_resource.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/memoryfwd.h \
@@ -586,13 +598,18 @@ renderer/CMakeFiles/FaceRenderer.dir/src/main.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/bits/node_handle.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/ostream.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/parse_numbers.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/postypes.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/predefined_ops.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/ptr_traits.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/quoted_string.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/range_access.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/refwrap.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/shared_ptr.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/shared_ptr_base.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/specfun.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/sstream.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/std_abs.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/std_function.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_algobase.h \
@@ -609,6 +626,7 @@ renderer/CMakeFiles/FaceRenderer.dir/src/main.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/bits/streambuf_iterator.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/string_view.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stringfwd.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/unique_ptr.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/unordered_map.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/uses_allocator.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/uses_allocator_args.h \
@@ -622,6 +640,7 @@ renderer/CMakeFiles/FaceRenderer.dir/src/main.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/climits \
   C:/msys64/mingw64/include/c++/14.2.0/clocale \
   C:/msys64/mingw64/include/c++/14.2.0/cmath \
+  C:/msys64/mingw64/include/c++/14.2.0/codecvt \
   C:/msys64/mingw64/include/c++/14.2.0/compare \
   C:/msys64/mingw64/include/c++/14.2.0/concepts \
   C:/msys64/mingw64/include/c++/14.2.0/cstddef \
@@ -629,6 +648,7 @@ renderer/CMakeFiles/FaceRenderer.dir/src/main.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/cstdio \
   C:/msys64/mingw64/include/c++/14.2.0/cstdlib \
   C:/msys64/mingw64/include/c++/14.2.0/cstring \
+  C:/msys64/mingw64/include/c++/14.2.0/ctime \
   C:/msys64/mingw64/include/c++/14.2.0/cwchar \
   C:/msys64/mingw64/include/c++/14.2.0/cwctype \
   C:/msys64/mingw64/include/c++/14.2.0/debug/assertions.h \
@@ -637,19 +657,26 @@ renderer/CMakeFiles/FaceRenderer.dir/src/main.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/atomicity.h \
+  C:/msys64/mingw64/include/c++/14.2.0/ext/concurrence.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/string_conversions.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/type_traits.h \
+  C:/msys64/mingw64/include/c++/14.2.0/filesystem \
+  C:/msys64/mingw64/include/c++/14.2.0/fstream \
   C:/msys64/mingw64/include/c++/14.2.0/functional \
   C:/msys64/mingw64/include/c++/14.2.0/initializer_list \
+  C:/msys64/mingw64/include/c++/14.2.0/iomanip \
   C:/msys64/mingw64/include/c++/14.2.0/ios \
   C:/msys64/mingw64/include/c++/14.2.0/iosfwd \
   C:/msys64/mingw64/include/c++/14.2.0/iostream \
   C:/msys64/mingw64/include/c++/14.2.0/istream \
   C:/msys64/mingw64/include/c++/14.2.0/limits \
+  C:/msys64/mingw64/include/c++/14.2.0/locale \
   C:/msys64/mingw64/include/c++/14.2.0/new \
   C:/msys64/mingw64/include/c++/14.2.0/ostream \
   C:/msys64/mingw64/include/c++/14.2.0/pstl/pstl_config.h \
+  C:/msys64/mingw64/include/c++/14.2.0/ratio \
+  C:/msys64/mingw64/include/c++/14.2.0/sstream \
   C:/msys64/mingw64/include/c++/14.2.0/stdexcept \
   C:/msys64/mingw64/include/c++/14.2.0/stdlib.h \
   C:/msys64/mingw64/include/c++/14.2.0/streambuf \
@@ -674,8 +701,10 @@ renderer/CMakeFiles/FaceRenderer.dir/src/main.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/unordered_map \
   C:/msys64/mingw64/include/c++/14.2.0/vector \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
+  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
+  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
@@ -683,7 +712,9 @@ renderer/CMakeFiles/FaceRenderer.dir/src/main.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h \
+  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h \
   C:/msys64/mingw64/include/cderr.h \
   C:/msys64/mingw64/include/cguid.h \
   C:/msys64/mingw64/include/combaseapi.h \
@@ -974,6 +1005,7 @@ renderer/CMakeFiles/FaceRenderer.dir/src/main.cpp.obj: C:/Users/Soohwan\ Kim/Des
 
 renderer/CMakeFiles/FaceRenderer.dir/src/mesh.cpp.obj: C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/mesh.cpp \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glew/include/GL/glew.h \
+  C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glew/include/GL/glew.h \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/func_matrix.inl \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/setup.hpp \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/mat2x3.hpp \
@@ -1127,6 +1159,7 @@ renderer/CMakeFiles/FaceRenderer.dir/src/mesh.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/backward/binders.h \
   C:/msys64/mingw64/include/c++/14.2.0/bit \
   C:/msys64/mingw64/include/c++/14.2.0/bits/alloc_traits.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/allocated_ptr.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/allocator.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/basic_ios.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/basic_ios.tcc \
@@ -1134,6 +1167,8 @@ renderer/CMakeFiles/FaceRenderer.dir/src/mesh.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/char_traits.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/charconv.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/chrono.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/codecvt.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/concept_check.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
@@ -1143,6 +1178,11 @@ renderer/CMakeFiles/FaceRenderer.dir/src/mesh.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception_defines.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/fs_dir.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/fs_fwd.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/fs_ops.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/fs_path.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/fstream.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/functexcept.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/functional_hash.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/hash_bytes.h \
@@ -1153,8 +1193,11 @@ renderer/CMakeFiles/FaceRenderer.dir/src/mesh.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/bits/istream.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/locale_classes.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/locale_classes.tcc \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/locale_conv.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets.tcc \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/localefwd.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/memory_resource.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/memoryfwd.h \
@@ -1164,13 +1207,18 @@ renderer/CMakeFiles/FaceRenderer.dir/src/mesh.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/bits/node_handle.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/ostream.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/parse_numbers.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/postypes.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/predefined_ops.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/ptr_traits.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/quoted_string.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/range_access.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/refwrap.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/shared_ptr.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/shared_ptr_base.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/specfun.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/sstream.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/std_abs.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/std_function.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_algobase.h \
@@ -1187,6 +1235,7 @@ renderer/CMakeFiles/FaceRenderer.dir/src/mesh.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/bits/streambuf_iterator.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/string_view.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stringfwd.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/unique_ptr.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/unordered_map.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/uses_allocator.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/uses_allocator_args.h \
@@ -1200,12 +1249,14 @@ renderer/CMakeFiles/FaceRenderer.dir/src/mesh.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/climits \
   C:/msys64/mingw64/include/c++/14.2.0/clocale \
   C:/msys64/mingw64/include/c++/14.2.0/cmath \
+  C:/msys64/mingw64/include/c++/14.2.0/codecvt \
   C:/msys64/mingw64/include/c++/14.2.0/compare \
   C:/msys64/mingw64/include/c++/14.2.0/concepts \
   C:/msys64/mingw64/include/c++/14.2.0/cstddef \
   C:/msys64/mingw64/include/c++/14.2.0/cstdint \
   C:/msys64/mingw64/include/c++/14.2.0/cstdio \
   C:/msys64/mingw64/include/c++/14.2.0/cstdlib \
+  C:/msys64/mingw64/include/c++/14.2.0/ctime \
   C:/msys64/mingw64/include/c++/14.2.0/cwchar \
   C:/msys64/mingw64/include/c++/14.2.0/cwctype \
   C:/msys64/mingw64/include/c++/14.2.0/debug/assertions.h \
@@ -1214,19 +1265,26 @@ renderer/CMakeFiles/FaceRenderer.dir/src/mesh.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/atomicity.h \
+  C:/msys64/mingw64/include/c++/14.2.0/ext/concurrence.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/string_conversions.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/type_traits.h \
+  C:/msys64/mingw64/include/c++/14.2.0/filesystem \
+  C:/msys64/mingw64/include/c++/14.2.0/fstream \
   C:/msys64/mingw64/include/c++/14.2.0/functional \
   C:/msys64/mingw64/include/c++/14.2.0/initializer_list \
+  C:/msys64/mingw64/include/c++/14.2.0/iomanip \
   C:/msys64/mingw64/include/c++/14.2.0/ios \
   C:/msys64/mingw64/include/c++/14.2.0/iosfwd \
   C:/msys64/mingw64/include/c++/14.2.0/iostream \
   C:/msys64/mingw64/include/c++/14.2.0/istream \
   C:/msys64/mingw64/include/c++/14.2.0/limits \
+  C:/msys64/mingw64/include/c++/14.2.0/locale \
   C:/msys64/mingw64/include/c++/14.2.0/new \
   C:/msys64/mingw64/include/c++/14.2.0/ostream \
   C:/msys64/mingw64/include/c++/14.2.0/pstl/pstl_config.h \
+  C:/msys64/mingw64/include/c++/14.2.0/ratio \
+  C:/msys64/mingw64/include/c++/14.2.0/sstream \
   C:/msys64/mingw64/include/c++/14.2.0/stdexcept \
   C:/msys64/mingw64/include/c++/14.2.0/stdlib.h \
   C:/msys64/mingw64/include/c++/14.2.0/streambuf \
@@ -1251,8 +1309,10 @@ renderer/CMakeFiles/FaceRenderer.dir/src/mesh.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/unordered_map \
   C:/msys64/mingw64/include/c++/14.2.0/vector \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
+  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
+  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
@@ -1260,7 +1320,9 @@ renderer/CMakeFiles/FaceRenderer.dir/src/mesh.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h \
+  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
   C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h \
   C:/msys64/mingw64/include/corecrt.h \
   C:/msys64/mingw64/include/corecrt_startup.h \
   C:/msys64/mingw64/include/corecrt_stdio_config.h \
@@ -1303,11 +1365,11 @@ renderer/CMakeFiles/FaceRenderer.dir/src/mesh.cpp.obj: C:/Users/Soohwan\ Kim/Des
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
-  C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/mesh.h
+  C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/mesh.h \
+  C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/model.h
 
 renderer/CMakeFiles/FaceRenderer.dir/src/model.cpp.obj: C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/model.cpp \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glew/include/GL/glew.h \
-  C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/stb/stb_image.h \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/func_matrix.inl \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/setup.hpp \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/mat2x3.hpp \
@@ -1387,6 +1449,7 @@ renderer/CMakeFiles/FaceRenderer.dir/src/model.cpp.obj: C:/Users/Soohwan\ Kim/De
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/vec2.hpp \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/vec3.hpp \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/vec4.hpp \
+  C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/stb/stb_image.h \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/common.hpp \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/_fixes.hpp \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/compute_common.hpp \
@@ -1676,7 +1739,6 @@ renderer/CMakeFiles/FaceRenderer.dir/src/model.cpp.obj: C:/Users/Soohwan\ Kim/De
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/xmmintrin.h \
-  C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/mesh.h \
   C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/model.h
 
 renderer/CMakeFiles/FaceRenderer.dir/src/shader.cpp.obj: C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/shader.cpp \
@@ -1878,10 +1940,6 @@ C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h:
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/ext/vector_float1_precision.hpp:
 
-C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/mesh.h:
-
-C:/msys64/mingw64/include/winnt.h:
-
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/mat3x3.hpp:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vbmi2intrin.h:
@@ -1900,8 +1958,6 @@ C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/gl
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/mat4x2.hpp:
 
-C:/msys64/mingw64/include/winscard.h:
-
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/ext/matrix_float2x2_precision.hpp:
 
 C:/msys64/mingw64/include/fibersapi.h:
@@ -1910,13 +1966,13 @@ C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/gl
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/mat4x3.hpp:
 
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512dqintrin.h:
+C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/type_mat2x3.hpp:
 
-C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/func_trigonometric.inl:
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512dqintrin.h:
 
 C:/msys64/mingw64/include/wingdi.h:
 
-C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/type_mat2x3.hpp:
+C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/func_trigonometric.inl:
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/mat4x4.hpp:
 
@@ -1984,8 +2040,6 @@ C:/msys64/mingw64/include/c++/14.2.0/iostream:
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/ext/vector_int4_sized.hpp:
 
-C:/msys64/mingw64/include/winnls.h:
-
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/ext/vector_float3.hpp:
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/type_vec2.hpp:
@@ -2018,9 +2072,9 @@ C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/gl
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vbmivlintrin.h:
 
-C:/msys64/mingw64/include/stdarg.h:
-
 C:/msys64/mingw64/include/sysinfoapi.h:
+
+C:/msys64/mingw64/include/stdarg.h:
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/ext/scalar_uint_sized.hpp:
 
@@ -2128,8 +2182,6 @@ C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/gl
 
 C:/msys64/mingw64/include/time.h:
 
-C:/msys64/mingw64/include/synchapi.h:
-
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/fwd.hpp:
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/vector_relational.hpp:
@@ -2206,15 +2258,15 @@ C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/gl
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/compute_common.hpp:
 
-C:/msys64/mingw64/include/c++/14.2.0/bits/allocated_ptr.h:
-
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/func_common.inl:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/allocated_ptr.h:
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/func_exponential.inl:
 
-C:/msys64/mingw64/include/c++/14.2.0/bits/parse_numbers.h:
-
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/func_geometric.inl:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/parse_numbers.h:
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/type_mat2x4.hpp:
 
@@ -2231,8 +2283,6 @@ C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/gl
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/type_mat3x3.hpp:
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/type_mat3x3.inl:
-
-C:/msys64/mingw64/include/winapifamily.h:
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/type_mat3x4.hpp:
 
@@ -2282,9 +2332,9 @@ C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/gl
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/ext/matrix_double2x4.hpp:
 
-C:/msys64/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc:
-
 C:/msys64/mingw64/include/wincon.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc:
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/ext/matrix_double2x4_precision.hpp:
 
@@ -2296,9 +2346,9 @@ C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/gl
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/ext/matrix_double3x3_precision.hpp:
 
-C:/msys64/mingw64/include/c++/14.2.0/bits/shared_ptr_base.h:
-
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/ext/matrix_double3x3.hpp:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/shared_ptr_base.h:
 
 C:/msys64/mingw64/include/handleapi.h:
 
@@ -2344,9 +2394,9 @@ C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/gl
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/ext/matrix_float3x3.hpp:
 
-C:/msys64/mingw64/include/concurrencysal.h:
-
 C:/msys64/mingw64/include/winsmcrd.h:
+
+C:/msys64/mingw64/include/concurrencysal.h:
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/ext/matrix_float3x3_precision.hpp:
 
@@ -2382,19 +2432,17 @@ C:/msys64/mingw64/include/rpc.h:
 
 C:/msys64/mingw64/include/nb30.h:
 
-C:/msys64/mingw64/include/c++/14.2.0/ratio:
-
 C:/msys64/mingw64/include/_mingw.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/ext/numeric_traits.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/ratio:
 
 C:/msys64/mingw64/include/_mingw_mac.h:
 
 C:/msys64/mingw64/include/combaseapi.h:
 
 C:/msys64/mingw64/include/_mingw_off_t.h:
-
-C:/msys64/mingw64/include/windef.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/x86gprintrin.h:
 
@@ -2416,17 +2464,17 @@ C:/msys64/mingw64/include/c++/14.2.0/bits/allocator.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/basic_ios.h:
 
+C:/msys64/mingw64/include/c++/14.2.0/bits/range_access.h:
+
+C:/msys64/mingw64/include/mciapi.h:
+
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/lzcntintrin.h:
+
+C:/msys64/mingw64/include/threadpoollegacyapiset.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/basic_ios.tcc:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/invoke.h:
-
-C:/msys64/mingw64/include/threadpoollegacyapiset.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/bits/range_access.h:
-
-C:/msys64/mingw64/include/mciapi.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/basic_string.tcc:
 
@@ -2454,9 +2502,9 @@ C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/gl
 
 C:/msys64/mingw64/include/c++/14.2.0/debug/assertions.h:
 
-C:/msys64/mingw64/include/c++/14.2.0/bits/fs_dir.h:
-
 C:/msys64/mingw64/include/c++/14.2.0/bits/enable_special_members.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/fs_dir.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/erase_if.h:
 
@@ -2464,11 +2512,13 @@ C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/gl
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/exception.h:
 
-C:/msys64/mingw64/include/c++/14.2.0/filesystem:
-
 C:/msys64/mingw64/include/c++/14.2.0/bits/exception_defines.h:
 
+C:/msys64/mingw64/include/c++/14.2.0/filesystem:
+
 C:/msys64/mingw64/include/c++/14.2.0/bits/exception_ptr.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/fs_fwd.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avxvnniintrin.h:
 
@@ -2508,17 +2558,17 @@ C:/msys64/mingw64/include/_bsd_types.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets.h:
 
+C:/msys64/mingw64/include/c++/14.2.0/bits/memoryfwd.h:
+
 C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h:
 
-C:/msys64/mingw64/include/c++/14.2.0/bits/memoryfwd.h:
+C:/msys64/mingw64/include/c++/14.2.0/fstream:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/prfchwintrin.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/move.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/nested_exception.h:
-
-C:/msys64/mingw64/include/timeapi.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/new_allocator.h:
 
@@ -2582,17 +2632,15 @@ C:/msys64/mingw64/include/securitybaseapi.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/unordered_map.h:
 
-C:/msys64/mingw64/include/c++/14.2.0/ext/concurrence.h:
-
 C:/msys64/mingw64/include/c++/14.2.0/bits/uses_allocator.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/ext/concurrence.h:
 
 C:/msys64/mingw64/include/apiset.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/vector.tcc:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/version.h:
-
-C:/msys64/mingw64/include/timezoneapi.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/cerrno:
 
@@ -2622,11 +2670,11 @@ C:/msys64/mingw64/include/c++/14.2.0/cwchar:
 
 C:/msys64/mingw64/include/c++/14.2.0/cwctype:
 
+C:/msys64/mingw64/include/c++/14.2.0/iomanip:
+
 C:/msys64/mingw64/include/c++/14.2.0/debug/debug.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/ext/aligned_buffer.h:
-
-C:/msys64/mingw64/include/winioctl.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/ext/alloc_traits.h:
 
@@ -2644,9 +2692,13 @@ C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h:
 
 C:/msys64/mingw64/include/sal.h:
 
+C:/msys64/mingw64/include/c++/14.2.0/locale:
+
 C:/msys64/mingw64/include/c++/14.2.0/initializer_list:
 
 C:/msys64/mingw64/include/c++/14.2.0/ios:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/fs_path.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/fma4intrin.h:
 
@@ -2724,8 +2776,6 @@ C:/msys64/mingw64/include/c++/14.2.0/type_traits:
 
 C:/msys64/mingw64/include/c++/14.2.0/typeinfo:
 
-C:/msys64/mingw64/include/winnetwk.h:
-
 C:/msys64/mingw64/include/c++/14.2.0/unordered_map:
 
 C:/msys64/mingw64/include/c++/14.2.0/vector:
@@ -2756,9 +2806,9 @@ C:/msys64/mingw64/include/math.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512ifmavlintrin.h:
 
-C:/msys64/mingw64/include/pthread.h:
-
 C:/msys64/mingw64/include/systemtopologyapi.h:
+
+C:/msys64/mingw64/include/pthread.h:
 
 C:/msys64/mingw64/include/pthread_compat.h:
 
@@ -2769,6 +2819,8 @@ C:/msys64/mingw64/include/pthread_signal.h:
 C:/msys64/mingw64/include/pthread_unistd.h:
 
 C:/msys64/mingw64/include/sdks/_mingw_ddk.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/fs_ops.h:
 
 C:/msys64/mingw64/include/sec_api/stdlib_s.h:
 
@@ -2815,6 +2867,8 @@ C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/ma
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/gtc/vec1.hpp:
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glew/include/GL/glew.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/ctime:
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glm/glm/detail/type_quat.hpp:
 
@@ -2874,7 +2928,43 @@ C:/msys64/mingw64/include/basetsd.h:
 
 C:/msys64/mingw64/include/bcrypt.h:
 
+C:/msys64/mingw64/include/c++/14.2.0/bits/chrono.h:
+
+C:/msys64/mingw64/include/wtypesbase.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/codecvt.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/unique_ptr.h:
+
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/usermsrintrin.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/fstream.tcc:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/locale_conv.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc:
+
+C:/msys64/mingw64/include/namedpipeapi.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/quoted_string.h:
+
+C:/msys64/mingw64/include/urlmon.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/shared_ptr.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/sstream.tcc:
+
 C:/msys64/mingw64/include/c++/14.2.0/cstring:
+
+C:/msys64/mingw64/include/c++/14.2.0/sstream:
+
+C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h:
 
 C:/msys64/mingw64/include/cderr.h:
 
@@ -2912,11 +3002,7 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx2intrin.h:
 
 C:/msys64/mingw64/include/mmiscapi.h:
 
-C:/msys64/mingw64/include/windows.h:
-
 C:/msys64/mingw64/include/msxml.h:
-
-C:/msys64/mingw64/include/namedpipeapi.h:
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/shader.h:
 
@@ -2954,15 +3040,21 @@ C:/msys64/mingw64/include/securityappcontainer.h:
 
 C:/msys64/mingw64/include/servprov.h:
 
-C:/msys64/mingw64/include/shellapi.h:
-
 C:/msys64/mingw64/include/wincrypt.h:
+
+C:/msys64/mingw64/include/shellapi.h:
 
 C:/msys64/mingw64/include/string.h:
 
 C:/msys64/mingw64/include/stringapiset.h:
 
+C:/msys64/mingw64/include/synchapi.h:
+
 C:/msys64/mingw64/include/threadpoolapiset.h:
+
+C:/msys64/mingw64/include/timeapi.h:
+
+C:/msys64/mingw64/include/timezoneapi.h:
 
 C:/msys64/mingw64/include/tvout.h:
 
@@ -2970,23 +3062,37 @@ C:/msys64/mingw64/include/unknwn.h:
 
 C:/msys64/mingw64/include/unknwnbase.h:
 
-C:/msys64/mingw64/include/c++/14.2.0/bits/shared_ptr.h:
-
-C:/msys64/mingw64/include/urlmon.h:
-
 C:/msys64/mingw64/include/utilapiset.h:
 
 C:/msys64/mingw64/include/virtdisk.h:
 
+C:/msys64/mingw64/include/winapifamily.h:
+
 C:/msys64/mingw64/include/winbase.h:
+
+C:/msys64/mingw64/include/windef.h:
+
+C:/msys64/mingw64/include/windows.h:
 
 C:/msys64/mingw64/include/winefs.h:
 
 C:/msys64/mingw64/include/winerror.h:
 
+C:/msys64/mingw64/include/winioctl.h:
+
+C:/msys64/mingw64/include/winnetwk.h:
+
+C:/msys64/mingw64/include/winnls.h:
+
+C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/mesh.h:
+
+C:/msys64/mingw64/include/winnt.h:
+
 C:/msys64/mingw64/include/winperf.h:
 
 C:/msys64/mingw64/include/winreg.h:
+
+C:/msys64/mingw64/include/winscard.h:
 
 C:/msys64/mingw64/include/winsock.h:
 
@@ -3001,12 +3107,6 @@ C:/msys64/mingw64/include/wnnc.h:
 C:/msys64/mingw64/include/wow64apiset.h:
 
 C:/msys64/mingw64/include/wtypes.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/bits/unique_ptr.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/bits/codecvt.h:
-
-C:/msys64/mingw64/include/wtypesbase.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/adxintrin.h:
 
@@ -3106,10 +3206,6 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/tsxldtrkintrin.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/uintrintrin.h:
 
-C:/msys64/mingw64/include/c++/14.2.0/bits/fstream.tcc:
-
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/usermsrintrin.h:
-
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/vaesintrin.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/waitpkgintrin.h:
@@ -3132,38 +3228,4 @@ C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/renderer/src/me
 
 C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/stb/stb_image.h:
 
-C:/msys64/mingw64/include/c++/14.2.0/bits/chrono.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/bits/fs_fwd.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/bits/fs_ops.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/bits/fs_path.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/bits/locale_conv.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc:
-
-C:/msys64/mingw64/include/c++/14.2.0/bits/quoted_string.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/bits/sstream.tcc:
-
-C:/msys64/mingw64/include/c++/14.2.0/ctime:
-
-C:/msys64/mingw64/include/c++/14.2.0/fstream:
-
-C:/msys64/mingw64/include/c++/14.2.0/iomanip:
-
-C:/msys64/mingw64/include/c++/14.2.0/locale:
-
 C:/msys64/mingw64/include/c++/14.2.0/math.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/sstream:
-
-C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h:

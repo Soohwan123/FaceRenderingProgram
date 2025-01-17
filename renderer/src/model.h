@@ -1,11 +1,18 @@
 #ifndef MODEL_H
 #define MODEL_H
-
+#include <GL/glew.h>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <filesystem>
 #include <vector>
-#include <string>
 #include "glm/glm/glm.hpp"
-#include "mesh.h"
 
+
+struct Vertex {
+    glm::vec3 Position;
+    glm::vec2 TexCoords;
+};
 
 /*
 // 버텍스 데이터와 인덱스 데이터를 저장하고 렌더링하는 기능을 제공한다.
@@ -20,15 +27,20 @@ public:
     
 
     //모델 데이터
-    std::vector<glm::vec3> vertices; // 얼굴 정점 위치
+    std::vector<Vertex> vertices; // 얼굴 정점 위치
     std::vector<unsigned int> indices; // 인덱스 버퍼용
     std::vector<unsigned int> noseIndices;  // 코 vertices의 인덱스를 저장할 벡터
     
     glm::vec3 getNoseCenter() const;
+    bool loadMtl(const char* path, std::string& textureFile);
+    unsigned int loadTexture(const char* path);
+    std::string getDirectory(const std::string& filePath);
+    std::vector<std::string> split(const std::string& s, char delimiter);
 
 private:
     // obj 로드 함수
     bool loadObj(const char* path);
+
 };
 
 #endif
