@@ -18,10 +18,10 @@ void Mesh::Draw(){
     glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
     
     // OpenGL 에러 체크
-    GLenum err;
-    while ((err = glGetError()) != GL_NO_ERROR) {
-        std::cout << "OpenGL error: " << err << std::endl;
-    }
+    // GLenum err;
+    // while ((err = glGetError()) != GL_NO_ERROR) {
+    //     std::cout << "OpenGL error: " << err << std::endl;
+    // }
     
     glBindVertexArray(0);
 }

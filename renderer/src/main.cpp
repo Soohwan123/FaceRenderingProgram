@@ -1,5 +1,10 @@
 #ifdef _WIN32
 #include <Windows.h>
+#include <direct.h>
+#define GetCurrentDir _getcwd
+#else
+#include <unistd.h>
+#define GetCurrentDir getcwd
 #endif
 #include "../../external/glew/include/GL/glew.h"
 #include "../../external/glfw/include/GLFW/glfw3.h"
@@ -18,7 +23,7 @@ const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
 // 카메라
-Camera camera(glm::vec3(2.0f, -9.0f, -14.0f));
+Camera* g_camera = nullptr;
 float lastX = SCR_WIDTH / 2.0f;
 float lastY = SCR_HEIGHT / 2.0f;
 bool firstMouse = true;
@@ -34,7 +39,7 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 void processInput(GLFWwindow* window);
 
 int main() {
-        // 콘솔 한글 출력을 위한 설정
+    // 콘솔 한글 출력을 위한 설정
     #ifdef _WIN32
         SetConsoleOutputCP(CP_UTF8);
     #endif
@@ -77,14 +82,46 @@ int main() {
     // 마우스 커서 설정
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
-    // 셰이더 로드
-    std::cout << "현재 작업 디렉토리에서 셰이더 로드 시도..." << std::endl;
-    Shader shader("shaders/vertex.glsl", "shaders/fragment.glsl");
+    // 셰이더 로드 
+    Shader shader("build/renderer/shaders/vertex.glsl", 
+                 "build/renderer/shaders/fragment.glsl");
+    shader.use();
+    //shader.setInt("texture1", 0);  // 텍스처 유닛 0 사용
 
     // 모델 로드
-    std::cout << "현재 작업 디렉토리에서 모델 로드 시도..." << std::endl;
-    Model model("../../models/face.obj");
-    Mesh mesh(model.vertices, model.indices);
+    Model model("models/face.obj");
+
+    
+
+    // 코의 중심점 계산
+    // 모델의 vertices를 변환하여 적절한 위치와 크기로 조정
+    float scale = 0.02f;
+    glm::mat4 initialTransform = glm::mat4(1.0f);
+    initialTransform = glm::scale(initialTransform, glm::vec3(scale));
+    // roll 180도 회전
+    initialTransform = glm::rotate(initialTransform, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+    
+    // vertices 변환
+    std::vector<glm::vec3> transformedVertices = model.vertices;
+    for(auto& vertex : transformedVertices) {
+        glm::vec4 transformed = initialTransform * glm::vec4(vertex, 1.0f);
+        vertex = glm::vec3(transformed);
+    }
+    
+    // 변환된 vertices로 새로운 코의 중심점 계산
+    glm::vec3 noseCenter = glm::vec3(0.0f);
+    for(unsigned int idx : model.noseIndices) {
+        noseCenter += transformedVertices[idx];
+    }
+    noseCenter /= model.noseIndices.size();
+    
+    // 카메라를 변환된 코의 중심점 앞에 위치시킴
+    glm::vec3 cameraPos = noseCenter + glm::vec3(0.0f, 0.0f, -10.0f);  // z축으로 2단위 뒤에 위치
+    g_camera = new Camera(cameraPos);
+    g_camera->ProcessMouseMovement(0, 0, false);  // 0,0으로 움직여서 view matrix 초기화
+    
+    // 변환된 vertices로 메시 생성
+    Mesh mesh(transformedVertices, model.indices);
 
     // 렌더링 루프
     while (!glfwWindowShouldClose(window)) {
@@ -102,20 +139,14 @@ int main() {
 
         // 셰이더 사용
         shader.use();
+        shader.setInt("texture1", 0);
 
-        // 변환 행렬 설정
+        // 변환 행렬
         glm::mat4 model = glm::mat4(1.0f);
-        model = glm::translate(model, glm::vec3(0.0f, 0.0f, -10.0f));
-        model = glm::scale(model, glm::vec3(0.02f));
-        model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(1.0f, 0.0f, 0.0f));
-
-        // 행렬 값 출력
-        std::cout << "Model matrix translation: " << model[3][0] << ", " << model[3][1] << ", " << model[3][2] << std::endl;
-        std::cout << "Model matrix scale: " << model[0][0] << ", " << model[1][1] << ", " << model[2][2] << std::endl;
-
+    
         shader.setMat4("model", glm::value_ptr(model));
-        shader.setMat4("view", glm::value_ptr(camera.GetViewMatrix()));
-        shader.setMat4("projection", glm::value_ptr(camera.GetProjectionMatrix((float)SCR_WIDTH / (float)SCR_HEIGHT)));
+        shader.setMat4("view", glm::value_ptr(g_camera->GetViewMatrix()));
+        shader.setMat4("projection", glm::value_ptr(g_camera->GetProjectionMatrix((float)SCR_WIDTH / (float)SCR_HEIGHT)));
 
         // 렌더링 루프 안에서, mesh.Draw() 전에
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -130,6 +161,7 @@ int main() {
 
     // 종료
     glfwTerminate();
+    delete g_camera;
     return 0;
 }
 
@@ -155,12 +187,12 @@ void mouse_callback(GLFWwindow* window, double xposIn, double yposIn) {
     lastX = xpos;
     lastY = ypos;
 
-    camera.ProcessMouseMovement(xoffset, yoffset);
+    g_camera->ProcessMouseMovement(xoffset, yoffset, false);
 }
 
 // 마우스 스크롤 콜백
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
-    camera.ProcessMouseScroll(static_cast<float>(yoffset));
+    g_camera->ProcessMouseScroll(static_cast<float>(yoffset));
 }
 
 // 키보드 입력 처리
@@ -169,11 +201,11 @@ void processInput(GLFWwindow* window) {
         glfwSetWindowShouldClose(window, true);
 
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-        camera.ProcessKeyboard(FORWARD, deltaTime);
+        g_camera->ProcessKeyboard(FORWARD, deltaTime);
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-        camera.ProcessKeyboard(BACKWARD, deltaTime);
+        g_camera->ProcessKeyboard(BACKWARD, deltaTime);
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-        camera.ProcessKeyboard(LEFT, deltaTime);
+        g_camera->ProcessKeyboard(LEFT, deltaTime);
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-        camera.ProcessKeyboard(RIGHT, deltaTime);
+        g_camera->ProcessKeyboard(RIGHT, deltaTime);
 }

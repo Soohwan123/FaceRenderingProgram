@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include "glm/glm/glm.hpp"
+#include "mesh.h"
 
 
 /*
@@ -21,6 +22,9 @@ public:
     //모델 데이터
     std::vector<glm::vec3> vertices; // 얼굴 정점 위치
     std::vector<unsigned int> indices; // 인덱스 버퍼용
+    std::vector<unsigned int> noseIndices;  // 코 vertices의 인덱스를 저장할 벡터
+    
+    glm::vec3 getNoseCenter() const;
 
 private:
     // obj 로드 함수

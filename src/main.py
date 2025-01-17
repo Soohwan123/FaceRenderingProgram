@@ -9,8 +9,8 @@ def main():
         print("프로그램 시작...")
         
         # 출력 폴더 생성
-        if not os.path.exists('output'):
-            os.makedirs('output')
+        if not os.path.exists('models'):
+            os.makedirs('models')
         
         cap = cv2.VideoCapture(0)
         if not cap.isOpened():
@@ -23,7 +23,7 @@ def main():
         processor = MeshProcessor()
         print("detector와 processor 초기화 완료")
         
-        save_requested = False  # OBJ 저장 플래그
+        save_requested = False
         
         while True:
             ret, frame = cap.read()
@@ -31,15 +31,14 @@ def main():
                 print("프레임을 읽을 수 없습니다!")
                 break
                 
-            points = detector.detect_landmarks(frame)
+            # 얼굴 특징점 감지
+            points, nose_points = detector.detect_landmarks(frame)
             
             if points is not None:
-                print(f"특징점 {len(points)}개 감지됨")
+                print(f"특징점 {len(points)}개 감지됨 (코 특징점: {len(nose_points)}개)")
                 
                 # 특징점 그리기
-                for point in points:
-                    x, y = int(point[0]), int(point[1])
-                    cv2.circle(frame, (x, y), 1, (0, 255, 0), -1)
+                frame = detector.draw_landmarks(frame, points, nose_points)
                 
                 # 메쉬 생성
                 triangles = processor.create_mesh(points)
@@ -55,10 +54,24 @@ def main():
                     cv2.line(frame, pt2, pt3, (255, 255, 255), 1)
                     cv2.line(frame, pt3, pt1, (255, 255, 255), 1)
                 
-                # 's' 키를 누르면 OBJ 파일로 저장
+                # 's' 키를 누르면 OBJ 파일 저장
                 if save_requested:
-                    print("OBJ 파일 저장 중...")
-                    processor.save_to_obj(points, triangles, 'output/face.obj')
+                    current_dir = os.path.dirname(os.path.abspath(__file__))  # src 폴더
+                    project_root = os.path.dirname(current_dir)  # src의 상위 폴더
+                    models_dir = os.path.join(project_root, 'models')  # models 폴더
+                    obj_path = os.path.join(models_dir, 'face.obj')
+
+                    # 기존 파일 삭제
+                    if os.path.exists(obj_path):
+                        try:
+                            os.remove(obj_path)
+                            print(f"기존 OBJ 파일 삭제됨: {obj_path}")
+                        except Exception as e:
+                            print(f"기존 파일 삭제 중 에러 발생: {str(e)}")
+
+                    # OBJ 파일 저장 (skin_texture.jpg 사용)
+                    print(f"OBJ 파일 저장 중... ({obj_path})")
+                    processor.save_to_obj(points, triangles, obj_path, nose_points)
                     print("OBJ 파일 저장 완료")
                     save_requested = False
             else:

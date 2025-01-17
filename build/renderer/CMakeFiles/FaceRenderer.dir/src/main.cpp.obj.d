@@ -237,7 +237,8 @@ renderer/CMakeFiles/FaceRenderer.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/commdlg.h C:/msys64/mingw64/include/stralign.h \
  C:/msys64/mingw64/include/sec_api/stralign_s.h \
  C:/msys64/mingw64/include/winsvc.h C:/msys64/mingw64/include/mcx.h \
- C:/msys64/mingw64/include/imm.h \
+ C:/msys64/mingw64/include/imm.h C:/msys64/mingw64/include/direct.h \
+ C:/msys64/mingw64/include/io.h C:/msys64/mingw64/include/_mingw_off_t.h \
  C:/Users/Soohwan\ Kim/Desktop/FaceRendering/FaceRenderingProgram/external/glew/include/GL/glew.h \
  C:/msys64/mingw64/include/inttypes.h \
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
@@ -255,7 +256,6 @@ renderer/CMakeFiles/FaceRenderer.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/cwchar \
  C:/msys64/mingw64/include/wchar.h \
  C:/msys64/mingw64/include/corecrt_stdio_config.h \
- C:/msys64/mingw64/include/_mingw_off_t.h \
  C:/msys64/mingw64/include/_mingw_stat64.h \
  C:/msys64/mingw64/include/swprintf.inl \
  C:/msys64/mingw64/include/sec_api/wchar_s.h \

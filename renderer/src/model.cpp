@@ -1,7 +1,9 @@
 #include "model.h"
+#include <iostream>
 #include <fstream>
 #include <sstream>
-#include <iostream>
+#include <filesystem>
+
 
 
 Model::Model(const char* path){
@@ -16,42 +18,62 @@ Model::~Model(){
 
 bool Model::loadObj(const char* path){
     std::ifstream file(path);
-    if(!file){
-        std::cerr << "파일 열기 실패: " << path << std::endl;
+    if (!file.is_open()) {
+        std::cerr << "Error: Cannot open file " << path << std::endl;
         return false;
     }
 
     std::string line;
-    while(std::getline(file, line)){
-        std::istringstream iss(line);
-        std::string type;
-        iss >> type;
+    while (std::getline(file, line)) {
+        if (line.empty()) continue;
 
-        // 버텍스 위치
-        if(type == "v"){
+        std::istringstream iss(line);
+        std::string prefix;
+        iss >> prefix;
+
+        if (prefix == "v") {
             glm::vec3 vertex;
             iss >> vertex.x >> vertex.y >> vertex.z;
             vertices.push_back(vertex);
         }
-        else if(type == "f"){  // 삼각형 정의
-            std::string v1, v2, v3;
+        else if (prefix == "f") {
+            unsigned int v1, v2, v3;
             iss >> v1 >> v2 >> v3;
-
-            //obj 인덱스는 1부터 시작하므로 0부터 시작하도록 1을 뺀다
-            // 여기서는 위치인덱스만 처리(텍스처, 노말라이즈 안함)
-            indices.push_back(std::stoi(v1) - 1);
-            indices.push_back(std::stoi(v3) - 1);
-            indices.push_back(std::stoi(v2) - 1);
+            // OBJ는 1-based indexing이므로 1을 빼줌
+            indices.push_back(v1 - 1);
+            indices.push_back(v2 - 1);
+            indices.push_back(v3 - 1);
         }
-
-        // 다른 OBJ 요소들 (vt, vn 등)은 현재 무시
+        else if (prefix == "#") {
+            // 코 vertex 인덱스 읽기
+            std::string comment;
+            std::getline(iss, comment);
+            if (comment.find("nose_vertex") != std::string::npos) {
+                unsigned int noseIdx;
+                sscanf(comment.c_str(), " nose_vertex %u", &noseIdx);
+                noseIndices.push_back(noseIdx - 1);  // 1-based to 0-based
+            }
+        }
     }
-    
 
-    std::cout << "Model loaded: " << vertices.size() << " vertices, " 
-              << indices.size() / 3 << " triangles" << std::endl;
-    
-    file.close();
+    if (!noseIndices.empty()) {
+        std::cout << "Loaded " << noseIndices.size() << " nose vertices" << std::endl;
+        
+        // 코의 중심점 계산
+        glm::vec3 noseCenter = getNoseCenter();
+        std::cout << "Nose center: (" << noseCenter.x << ", " 
+                                    << noseCenter.y << ", " 
+                                    << noseCenter.z << ")" << std::endl;
+    }
+
     return true;
+}
+
+glm::vec3 Model::getNoseCenter() const {
+    glm::vec3 center(0.0f);
+    for (unsigned int idx : noseIndices) {
+        center += vertices[idx];
+    }
+    return center / static_cast<float>(noseIndices.size());
 }
 

@@ -1,6 +1,6 @@
-import cv2
 import mediapipe as mp
 import numpy as np
+import cv2
 
 class FaceDetector:
     def __init__(self):
@@ -19,6 +19,9 @@ class FaceDetector:
         # MediaPipe 드로잉 유틸리티 (시각화용)
         self.mp_drawing = mp.solutions.drawing_utils
         self.mp_drawing_styles = mp.solutions.drawing_styles
+        
+        # 코 관련 랜드마크 인덱스 정의
+        self.nose_indices = [1, 2, 3, 4, 5, 6, 168, 195, 197, 168]  # 코 부분 랜드마크
 
     def detect_landmarks(self, image):
         # MediaPipe는 RGB 형식을 사용하므로 BGR(OpenCV 기본)에서 변환
@@ -34,6 +37,7 @@ class FaceDetector:
             
             # 478개의 3D 좌표를 저장할 배열 생성
             points = np.zeros((478, 3))  # (x, y, z) 좌표
+            nose_points = []  # 코 점들을 따로 저장
             
             # 각 랜드마크의 좌표 추출
             for idx, landmark in enumerate(face_landmarks.landmark):
@@ -42,11 +46,15 @@ class FaceDetector:
                     landmark.y * image.shape[0],  # y좌표: 0~1 값을 이미지 높이에 맞게 변환
                     landmark.z * 1000  # z좌표: 깊이 정보를 보기 좋게 스케일 조정
                 ]
+                
+                # 코 부분 랜드마크인 경우 따로 저장
+                if idx in self.nose_indices:
+                    nose_points.append(points[idx])
             
-            return points
-        return None  # 얼굴이 감지되지 않은 경우
+            return points, nose_points
+        return None, None
 
-    def draw_landmarks(self, image, points):
+    def draw_landmarks(self, image, points, nose_points):
         if points is None:
             return image
         
@@ -56,5 +64,9 @@ class FaceDetector:
             # 원으로 랜드마크 표시
             # (x,y): 중심점, 1: 반지름, (0,255,0): 초록색, -1: 원 내부 채우기
             cv2.circle(image, (x, y), 1, (0, 255, 0), -1)
+            
+            # 코 랜드마크는 빨간색으로 표시
+            if any(np.array_equal(point, nose_point) for nose_point in nose_points):
+                cv2.circle(image, (x, y), 2, (0, 0, 255), -1)
         
         return image
