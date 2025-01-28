@@ -1,10 +1,32 @@
 #include "mesh.h"
+#include "model.h"
 #include <iostream>
 
 Mesh::Mesh(const std::vector<Vertex>& vertices, const std::vector<unsigned int>& indices)
     : vertices(vertices), indices(indices)
 {
+    std::cout << "\n[Mesh 초기화 시작]" << std::endl;
+    std::cout << "Vertex 구조체 크기: " << sizeof(Vertex) << " bytes" << std::endl;
+    std::cout << "Position offset: " << offsetof(Vertex, Position) << std::endl;
+    std::cout << "TexCoords offset: " << offsetof(Vertex, TexCoords) << std::endl;
+    std::cout << "Normal offset: " << offsetof(Vertex, Normal) << std::endl;
+    std::cout << "총 vertex 수: " << vertices.size() << std::endl;
+    std::cout << "총 index 수: " << indices.size() << std::endl;
+
     setupMesh();
+
+    // 버퍼 생성 후 ID 확인
+    std::cout << "VAO ID: " << vao << std::endl;
+    std::cout << "VBO ID: " << vbo << std::endl;
+    std::cout << "EBO ID: " << ebo << std::endl;
+    
+    // OpenGL 에러 체크
+    GLenum err;
+    while((err = glGetError()) != GL_NO_ERROR) {
+        std::cout << "OpenGL error: " << err << std::endl;
+    }
+    
+    std::cout << "[Mesh 초기화 완료]\n" << std::endl;
 }
 
 Mesh::~Mesh(){
@@ -51,6 +73,10 @@ void Mesh::setupMesh(){
     // TexCoords 속성 설정 (location = 1)
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, TexCoords));
     glEnableVertexAttribArray(1);
+
+    // Normal 속성 설정 (location = 2)
+    glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Normal));
+    glEnableVertexAttribArray(2);
 
     // VAO 언바인드
     std::cout << "VAO: " << vao << ", VBO: " << vbo << ", EBO: " << ebo << std::endl;

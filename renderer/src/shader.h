@@ -1,7 +1,8 @@
 #ifndef SHADER_H
 #define SHADER_H
 
-#include "../external/glew/include/GL/glew.h"
+#include "../../external/glew/include/GL/glew.h"
+#include "../../external/glm/glm/glm.hpp"
 #include <string>
 
 
@@ -21,6 +22,7 @@ public:
     void setInt(const std::string &name, int value) const;
     void setFloat(const std::string &name, float value) const;
     void setMat4(const std::string &name, const float* value) const;
+    void setVec3(const std::string &name, const float* value) const;
 };
 
 #endif

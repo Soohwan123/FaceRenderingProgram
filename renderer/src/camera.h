@@ -1,8 +1,8 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-#include "glm/glm/glm.hpp"
-#include "glm/glm/gtc/matrix_transform.hpp"
+#include "../../external/glm/glm/glm.hpp"
+#include "../../external/glm/glm/gtc/matrix_transform.hpp"
 
 
 //카메라 이동방향 상수

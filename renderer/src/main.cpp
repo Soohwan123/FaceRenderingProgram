@@ -39,35 +39,48 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 void processInput(GLFWwindow* window);
 
 int main() {
+    /**************************초기 설정********************************* */
     // 콘솔 한글 출력을 위한 설정
     #ifdef _WIN32
         SetConsoleOutputCP(CP_UTF8);
     #endif
-    // GLFW 초기화
+ // GLFW 초기화
     if (!glfwInit()) {
         std::cout << "GLFW 초기화 실패" << std::endl;
         return -1;
     }
+    std::cout << "GLFW 초기화 성공" << std::endl;
 
-    // OpenGL 버전 설정 (3.3)
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    // OpenGL 버전 설정
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    std::cout << "OpenGL 버전 설정: 4.0" << std::endl;
 
     // 윈도우 생성
     GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Face Renderer", NULL, NULL);
-    if (!window) {
-        std::cout << "GLFW 윈도우 생성 실패" << std::endl;
+    if (window == NULL) {
+        std::cout << "윈도우 생성 실패" << std::endl;
         glfwTerminate();
         return -1;
     }
+    std::cout << "윈도우 생성 성공" << std::endl;
+
     glfwMakeContextCurrent(window);
+    std::cout << "OpenGL 컨텍스트 설정 완료" << std::endl;
 
     // GLEW 초기화
     if (glewInit() != GLEW_OK) {
         std::cout << "GLEW 초기화 실패" << std::endl;
         return -1;
     }
+    std::cout << "GLEW 초기화 성공" << std::endl;
+
+    // OpenGL 버전 체크
+    const GLubyte* version = glGetString(GL_VERSION);
+    const GLubyte* glslVersion = glGetString(GL_SHADING_LANGUAGE_VERSION);
+    std::cout << "OpenGL 버전: " << version << std::endl;
+    std::cout << "GLSL 버전: " << glslVersion << std::endl;
 
     // GLEW 초기화 후에 추가
     // 깊이 테스트
@@ -82,9 +95,15 @@ int main() {
     // 마우스 커서 설정
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
+
+    /**************************초기 설정********************************* */
+
+
+    /**************************렌더링 설정******************************** */
+
     // 셰이더 로드 
-    Shader shader("build/renderer/shaders/vertex.glsl", 
-                 "build/renderer/shaders/fragment.glsl");
+    Shader shader("shaders/vertex.glsl", 
+                 "shaders/fragment.glsl");
     shader.use();
     //shader.setInt("texture1", 0);  // 텍스처 유닛 0 사용
 
@@ -134,6 +153,35 @@ int main() {
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
 
+        model.loadObj("models/face.obj");
+
+            unsigned int textureID = model.loadTexture("models/skin_texture.jpg");
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, textureID);
+
+
+    // 코의 중심점 계산
+    // 모델의 vertices를 변환하여 적절한 위치와 크기로 조정
+    float scale = 0.02f;
+    glm::mat4 initialTransform = glm::mat4(1.0f);
+    initialTransform = glm::scale(initialTransform, glm::vec3(scale));
+    // roll 180도 회전
+    initialTransform = glm::rotate(initialTransform, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+    
+    // vertices 변환
+    std::vector<Vertex> transformedVertices = model.vertices;
+    for(auto& vertex : transformedVertices) {
+        glm::vec4 transformed = initialTransform * glm::vec4(vertex.Position, 1.0f);
+        vertex.Position = glm::vec3(transformed);
+    }
+    
+    // 변환된 vertices로 새로운 코의 중심점 계산
+    glm::vec3 noseCenter = glm::vec3(0.0f);
+    for(unsigned int idx : model.noseIndices) {
+        noseCenter += transformedVertices[idx].Position;
+    }
+    noseCenter /= model.noseIndices.size();
+
         // 입력 처리
         processInput(window);
 
@@ -151,6 +199,14 @@ int main() {
         shader.setMat4("model", glm::value_ptr(model));
         shader.setMat4("view", glm::value_ptr(g_camera->GetViewMatrix()));
         shader.setMat4("projection", glm::value_ptr(g_camera->GetProjectionMatrix((float)SCR_WIDTH / (float)SCR_HEIGHT)));
+
+        // 조명 설정
+        glm::vec3 lightPos(2.0f, 2.0f, 2.0f);
+        glm::vec3 lightColor(1.0f, 1.0f, 1.0f); // 흰색
+
+        shader.setVec3("lightPos", glm::value_ptr(lightPos));
+        shader.setVec3("lightColor", glm::value_ptr(lightColor));
+        shader.setVec3("viewPos", glm::value_ptr(g_camera->GetProjectionMatrix((float)SCR_WIDTH / (float)SCR_HEIGHT)));
 
         // 렌더링 루프 안에서, mesh.Draw() 전에
         glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
@@ -213,3 +269,4 @@ void processInput(GLFWwindow* window) {
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
         g_camera->ProcessKeyboard(RIGHT, deltaTime);
 }
+

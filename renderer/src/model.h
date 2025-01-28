@@ -1,17 +1,18 @@
 #ifndef MODEL_H
 #define MODEL_H
-#include <GL/glew.h>
+#include "../../external/glew/include/GL/glew.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <filesystem>
 #include <vector>
-#include "glm/glm/glm.hpp"
+#include "../../external/glm/glm/glm.hpp"
 
 
 struct Vertex {
     glm::vec3 Position;
     glm::vec2 TexCoords;
+    glm::vec3 Normal; // 법선 벡터 (VN)
 };
 
 /*
@@ -36,8 +37,7 @@ public:
     unsigned int loadTexture(const char* path);
     std::string getDirectory(const std::string& filePath);
     std::vector<std::string> split(const std::string& s, char delimiter);
-
-private:
+    void calculateNormals();
     // obj 로드 함수
     bool loadObj(const char* path);
 

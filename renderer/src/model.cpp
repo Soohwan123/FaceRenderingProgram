@@ -7,11 +7,15 @@ Model::Model(const char* path){
     if(!loadObj(path)){
         std::cerr << "모델 로드 실패: " << path << std::endl;
     }
+    
+    // 법선 벡터 계산 추가
+    calculateNormals();
 }
 
 Model::~Model(){
 
 }
+
 
 bool Model::loadObj(const char* path) {
     std::ifstream file(path);
@@ -107,6 +111,62 @@ glm::vec3 Model::getNoseCenter() const {
         center += vertices[idx].Position;
     }
     return center / static_cast<float>(noseIndices.size());
+}
+
+//법선 벡터 계산
+void Model::calculateNormals() {
+    // 초기화 전 vertices 크기 확인
+    std::cout << "\n[Normal 계산 시작]" << std::endl;
+    std::cout << "vertices 크기: " << vertices.size() << std::endl;
+    
+    // 각 정점의 법선 벡터를 0으로 초기화
+    for(auto& v: vertices){
+        v.Normal = glm::vec3(0.0f);
+    }
+
+    // 삼각형 개수 출력
+    std::cout << "삼각형 개수: " << indices.size() / 3 << std::endl;
+
+    //각 삼각형의 법선벡터 구하기
+    for(size_t i = 0; i < indices.size(); i += 3){
+        unsigned int idx1 = indices[i];
+        unsigned int idx2 = indices[i+1];
+        unsigned int idx3 = indices[i+2];
+
+        // 인덱스 범위 체크
+        if(idx1 >= vertices.size() || idx2 >= vertices.size() || idx3 >= vertices.size()) {
+            std::cout << "잘못된 인덱스 발견: " << idx1 << ", " << idx2 << ", " << idx3 << std::endl;
+            continue;
+        }
+
+        //삼각형의 두 엣지의 벡터
+        glm::vec3 edge1 = vertices[idx2].Position - vertices[idx1].Position;
+        glm::vec3 edge2 = vertices[idx3].Position - vertices[idx1].Position;
+
+        // 법선 벡터 계산 (외적)
+        glm::vec3 normal = glm::normalize(glm::cross(edge1, edge2));
+
+        // 계산된 법선 벡터 출력 (100개 단위로)
+        if(i % 300 == 0) {
+            std::cout << "삼각형 " << i/3 << " 법선: " 
+                      << normal.x << ", " << normal.y << ", " << normal.z << std::endl;
+        }
+
+        vertices[idx1].Normal += normal;
+        vertices[idx2].Normal += normal;
+        vertices[idx3].Normal += normal;
+    }
+
+    // 정규화 후 몇 개의 법선 벡터 출력
+    std::cout << "\n정규화된 법선 벡터 샘플:" << std::endl;
+    for(size_t i = 0; i < vertices.size(); i += 1000) {
+        glm::vec3& normal = vertices[i].Normal;
+        normal = glm::normalize(normal);
+        std::cout << "정점 " << i << " 법선: " 
+                  << normal.x << ", " << normal.y << ", " << normal.z << std::endl;
+    }
+    
+    std::cout << "[Normal 계산 완료]\n" << std::endl;
 }
 
 std::string Model::getDirectory(const std::string& filepath) {

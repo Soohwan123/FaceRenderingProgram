@@ -58,7 +58,9 @@ def main():
                 if save_requested:
                     current_dir = os.path.dirname(os.path.abspath(__file__))  # src 폴더
                     project_root = os.path.dirname(current_dir)  # src의 상위 폴더
-                    models_dir = os.path.join(project_root, 'models')  # models 폴더
+                    build_dir = os.path.join(project_root, 'build')  # build 폴더
+                    renderer_dir = os.path.join(build_dir, 'renderer')  # renderer 폴더
+                    models_dir = os.path.join(renderer_dir, 'models')  # models 폴더
                     obj_path = os.path.join(models_dir, 'face.obj')
 
                     # 기존 파일 삭제
