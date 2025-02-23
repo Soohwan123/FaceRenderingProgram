@@ -2,26 +2,6 @@
 
 이 프로그램은 실시간 얼굴 인식과 3D 렌더링을 결합한 애플리케이션입니다. OpenCV를 사용하여 얼굴을 감지하고 메쉬를 생성한 후, OpenGL을 사용하여 3D로 렌더링합니다.
 
-## 프로젝트 구조
-```
-FACERENDERINGPROGRAM/
-├── src/
-│   ├── main.py              # 메인 Python 프로그램
-│   ├── face_detection.py    # 얼굴 감지 클래스
-│   └── mesh_processing.py   # 메쉬 처리 클래스
-├── renderer/
-│   ├── src/
-│   │   ├── main.cpp        # OpenGL 렌더러 메인
-│   │   ├── mesh.h/cpp      # 메쉬 클래스
-│   │   ├── shader.h/cpp    # 셰이더 클래스
-│   │   ├── camera.h/cpp    # 카메라 클래스
-│   │   └── model.h/cpp     # 3D 모델 클래스
-│   └── shaders/
-│       ├── vertex.glsl     # 버텍스 셰이더
-│       └── fragment.glsl   # 프래그먼트 셰이더
-├── models/                  # 생성된 OBJ 파일 저장
-└── build/                  # 빌드 디렉토리
-```
 
 ## 주요 기능
 1. **실시간 얼굴 인식**
@@ -50,7 +30,7 @@ FACERENDERINGPROGRAM/
    - 'Q' 키를 눌러 종료
 
 3. 3D 렌더링 모드:
-   - build/FaceRenderer.exe 실행
+   - build/renderer/FaceRenderer.exe 실행
    - WASD: 카메라 이동
    - 마우스: 시점 변경
    - ESC: 렌더러 종료
@@ -94,5 +74,6 @@ FACERENDERINGPROGRAM/
 - [ ] 성능 최적화
 
 ## 버전 업데이트
-0.3v -> 텍스쳐와 라이팅 추가 완료
+- 0.3v -> 텍스쳐와 라이팅 추가 완료.
+- 0.31v -> 버그픽스.
 
