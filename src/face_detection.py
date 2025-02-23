@@ -45,7 +45,7 @@ class FaceDetector:
                 points[idx] = [
                     landmark.x * image.shape[1],  # x좌표: 0~1 값을 이미지 너비에 맞게 변환
                     landmark.y * image.shape[0],  # y좌표: 0~1 값을 이미지 높이에 맞게 변환
-                    landmark.z * 1000  # z좌표: 깊이 정보를 보기 좋게 스케일 조정
+                    landmark.z * 760  # z좌표: 깊이 정보를 보기 좋게 스케일 조정
                 ]
                 
                 # UV 좌표도 이미지 크기에 맞게 스케일 조정

@@ -146,41 +146,13 @@ int main() {
     // 변환된 vertices로 메시 생성
     Mesh mesh(transformedVertices, model.indices);
 
+
     // 렌더링 루프
     while (!glfwWindowShouldClose(window)) {
         // 프레임 시간 계산
         float currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
-
-        model.loadObj("models/face.obj");
-
-            unsigned int textureID = model.loadTexture("models/skin_texture.jpg");
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, textureID);
-
-
-    // 코의 중심점 계산
-    // 모델의 vertices를 변환하여 적절한 위치와 크기로 조정
-    float scale = 0.02f;
-    glm::mat4 initialTransform = glm::mat4(1.0f);
-    initialTransform = glm::scale(initialTransform, glm::vec3(scale));
-    // roll 180도 회전
-    initialTransform = glm::rotate(initialTransform, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f));
-    
-    // vertices 변환
-    std::vector<Vertex> transformedVertices = model.vertices;
-    for(auto& vertex : transformedVertices) {
-        glm::vec4 transformed = initialTransform * glm::vec4(vertex.Position, 1.0f);
-        vertex.Position = glm::vec3(transformed);
-    }
-    
-    // 변환된 vertices로 새로운 코의 중심점 계산
-    glm::vec3 noseCenter = glm::vec3(0.0f);
-    for(unsigned int idx : model.noseIndices) {
-        noseCenter += transformedVertices[idx].Position;
-    }
-    noseCenter /= model.noseIndices.size();
 
         // 입력 처리
         processInput(window);
