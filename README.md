@@ -65,7 +65,7 @@ FACERENDERINGPROGRAM/
 ### 1. Execution
 ```bash
 python src/main.py
-
+```
 ## 2. Face Detection Mode
 The webcam initializes automatically and starts face detection.
 
@@ -81,7 +81,7 @@ The webcam initializes automatically and starts face detection.
 ```bash
 build/FaceRenderer.exe   # Windows
 ./FaceRenderer           # Linux
-
+```
 
 ### Controls
 - `WASD` : Move camera  
@@ -117,7 +117,7 @@ build/FaceRenderer.exe   # Windows
 cd build
 cmake ..
 make
-
+```
 
 ### 2. Install Python Dependencies
 ```bash
