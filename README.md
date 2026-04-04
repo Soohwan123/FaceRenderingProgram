@@ -23,8 +23,7 @@ FACERENDERINGPROGRAM/
 │       └── fragment.glsl    # Fragment shader source
 ├── models/                  # Storage for generated OBJ files
 └── build/                   # Build artifacts and binaries
-# Face Detection & 3D Rendering System
-
+---
 ## Key Features
 
 ### 1. Real-time Face Detection
