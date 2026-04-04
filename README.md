@@ -3,7 +3,6 @@
 This application integrates real-time face detection with 3D rendering. It utilizes **OpenCV** for facial landmark detection and mesh generation, followed by **OpenGL** for high-performance 3D visualization.
 
 ---
-
 ## Project Structure
 ```text
 FACERENDERINGPROGRAM/
@@ -23,7 +22,9 @@ FACERENDERINGPROGRAM/
 │       └── fragment.glsl    # Fragment shader source
 ├── models/                  # Storage for generated OBJ files
 └── build/                   # Build artifacts and binaries
+```
 ---
+
 ## Key Features
 
 ### 1. Real-time Face Detection
