@@ -122,7 +122,7 @@ make
 ### 2. Install Python Dependencies
 ```bash
 pip install -r requirements.txt
-
+```
 ##  Troubleshooting
 
 ### Camera Failure
