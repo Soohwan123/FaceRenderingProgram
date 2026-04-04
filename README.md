@@ -5,7 +5,7 @@ This application integrates real-time face detection with 3D rendering. It utili
 ---
 
 ## Project Structure
-``text
+```text
 FACERENDERINGPROGRAM/
 ├── src/
 │   ├── main.py              # Main Python entry point
